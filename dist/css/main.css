@@ -1,2 +1,224 @@
 body {
-  font-size: 22px; }
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.logo {
+  display: inline-block;
+  margin: 23px 0;
+}
+
+.menu {
+  list-style: none;
+  margin-top: 37px;
+  padding-left: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 19px;
+}
+
+.menu li:first-child {
+  margin-left: 0;
+}
+
+.menu li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: #505a78;
+  padding: 7px;
+}
+
+.menu li a:hover {
+  color: #5274db;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.active {
+  display: block !important;
+}
+
+.humburger {
+  display: none;
+}
+
+.offer {
+  height: 600px;
+  background-color: #505a78;
+}
+
+.offer-text h1 {
+  font-size: 48px;
+  font-weight: 900;
+  color: #fff;
+  line-height: 48px;
+  letter-spacing: -1.2px;
+  margin-bottom: 30px;
+}
+
+.offer-text p {
+  color: #a5abbb;
+  margin-bottom: 25px;
+}
+
+.offer-text a {
+  display: inline-block;
+  padding: 15px 40px;
+  color: #fff;
+  text-transform: uppercase;
+  background-color: #7cdf95;
+  border: 2px solid #424d6c;
+}
+
+.offer-text a:hover {
+  text-decoration: none;
+  background-color: #53d574;
+  -webkit-transition: 0.2s;
+  -o-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.smartphone {
+  margin-top: 140px;
+  max-width: 100%;
+  height: auto;
+}
+
+/*==========  Desktop First  ==========*/
+/* Large Devices, Wide Screens */
+@media only screen and (max-width: 1199px) {
+  .smartphone {
+    margin-top: 219px;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 991px) {
+  .menu li a:hover {
+    background-color: #505a78;
+    color: #fff;
+  }
+  .offer {
+    height: 400px;
+  }
+  .offer-text h1 {
+    font-size: 40px;
+    margin-top: 50px;
+    font-weight: bold;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 767px) {
+  .menu {
+    display: none;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+  }
+  .menu li {
+    margin-left: 16px;
+  }
+  .humburger {
+    width: 40px;
+    height: 40px;
+    display: block;
+    position: relative;
+    margin-top: 15px;
+  }
+  .humburger span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -1px;
+    margin-left: -15px;
+    width: 30px;
+    height: 3px;
+    background-color: #505a78;
+  }
+  .humburger span::before, .humburger span::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -3px;
+    margin-left: -15px;
+    width: 30px;
+    height: 3px;
+    background-color: #505a78;
+  }
+  .humburger span::before, .humburger span::after {
+    content: '';
+    display: block;
+    -webkit-transition: 0.2s;
+    -o-transition: 0.2s;
+    transition: 0.2s;
+  }
+  .humburger span::before {
+    -webkit-transform: translateY(-5px);
+        -ms-transform: translateY(-5px);
+            transform: translateY(-5px);
+  }
+  .humburger span::after {
+    -webkit-transform: translateY(7px);
+        -ms-transform: translateY(7px);
+            transform: translateY(7px);
+  }
+  .hum-active span {
+    height: 0;
+  }
+  .hum-active span::before {
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+  }
+  .hum-active span::after {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 479px) {
+  .logo {
+    margin-left: 30px;
+  }
+  .menu li {
+    display: block;
+  }
+  .menu li a {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+  }
+  .menu li a:hover {
+    background-color: #505a78;
+    color: #fff;
+  }
+  .menu li:first-child {
+    margin-left: 16px;
+  }
+  .offer {
+    height: 350px;
+  }
+  .offer-text h1 {
+    font-size: 26px;
+    line-height: 35px;
+    margin-bottom: 15px;
+    letter-spacing: 0;
+    margin-top: 30px;
+    font-weight: bold;
+  }
+  .offer-text p {
+    font-size: 12px;
+    margin-right: 60px;
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width: 320px) {
+  /**/
+}

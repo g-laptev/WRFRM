@@ -1,3 +1,190 @@
-@import "part"
 
+
+$accent: #505a78
+$color-menu-h: #7c96e4
+$offer-color-p: #a5abbb
+$white: #fff
+$btn-h: #7cdf95
+$btn-border: #424d6c
+
+body
+  font-size: 14px
+  font-family: 'Montserrat', sans-serif
+
+.logo
+  display: inline-block
+  margin: 23px 0
+
+.menu
+  list-style: none
+  margin-top: 37px
+  padding-left: 0
+  li
+    display: inline-block
+    margin-left: 19px
+    &:first-child
+      margin-left: 0
+    a
+      text-decoration: none
+      text-transform: uppercase
+      font-weight: 900
+      color: $accent
+      padding: 7px
+      &:hover
+        color: darken($color-menu-h, 10%)
+        transition: 0.2s
+
+.active
+  display: block!important
   
+.humburger
+  display: none
+
+.offer
+  height: 600px
+  background-color: $accent
+  &-text
+    h1
+      font-size: 48px
+      font-weight: 900
+      color: $white
+      line-height: 48px
+      letter-spacing: -1.2px
+      margin-bottom: 30px
+    p
+      color: $offer-color-p
+      margin-bottom: 25px
+    a
+      display: inline-block
+      padding: 15px 40px
+      color: $white
+      text-transform: uppercase
+      background-color: $btn-h
+      border: 2px solid $btn-border
+      &:hover
+        text-decoration: none
+        background-color: darken($btn-h, 10%)
+        transition: 0.2s
+
+.smartphone
+  margin-top: 140px
+  max-width: 100%
+  height: auto
+
+
+
+
+
+
+
+/*==========  Desktop First  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1199px)
+  .smartphone
+    margin-top: 219px
+
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 991px)
+  .menu
+    li
+      a
+        &:hover
+          background-color: $accent
+          color: $white
+  .offer
+    height: 400px
+    &-text
+      h1
+        font-size: 40px
+        margin-top: 50px
+        font-weight: bold
+
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 767px)
+  .menu
+    display: none
+    margin-top: 1rem
+    margin-bottom: 2rem
+    li
+      margin-left: 16px
+  .humburger
+    width: 40px
+    height: 40px
+    display: block
+    position: relative
+    margin-top: 15px
+    span
+      position: absolute
+      top: 50%
+      left: 50%
+      margin-top: -1px
+      margin-left: -15px
+      width: 30px
+      height: 3px
+      background-color: $accent
+      &::before, &::after
+        position: absolute
+        top: 50%
+        left: 50%
+        margin-top: -3px
+        margin-left: -15px
+        width: 30px
+        height: 3px
+        background-color: $accent
+      &::before, &::after
+        content: ''
+        display: block
+        transition: 0.2s
+      &::before
+        transform: translateY(-5px)
+      &::after
+        transform: translateY(7px)
+  .hum-active span
+    height: 0
+    &::before
+      transform: rotate(45deg)
+    &::after
+      transform: rotate(-45deg)
+
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 479px)
+  .logo
+    margin-left: 30px
+  .menu
+    li
+      display: block
+      a
+        display: block
+        width: 100%
+        padding: 1rem
+        &:hover
+          background-color: $accent
+          color: $white
+      &:first-child
+        margin-left: 16px
+
+  .offer
+    height: 350px
+    &-text
+      h1
+        font-size: 26px
+        line-height: 35px
+        margin-bottom: 15px
+        letter-spacing: 0
+        margin-top: 30px
+        font-weight: bold
+      p
+        font-size: 12px
+        margin-right: 60px
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+  /**/
+
+

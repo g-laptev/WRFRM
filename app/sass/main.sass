@@ -71,7 +71,39 @@ body
   max-width: 100%
   height: auto
 
+.features
+  margin-bottom: 100px
+  &-block
+    text-align: center
+    margin-top: 110px
+    margin-bottom: 80px
+    h2
+      font-weight: 800
+      color: $accent
+      font-size: 48px
+      letter-spacing: -1.2px
+    p
+      color: $offer-color-p
+      font-weight: 300
+      line-height: 24px
+      letter-spacing: 0.14px
+  &-item
+    margin-bottom: 50px
+    h5
+      color: $accent
+      font-size: 24px
+      font-weight: 900
+      line-height: 24px
+      letter-spacing: -0.6px
+    p
+      color: $offer-color-p
+      font-weight: 300
+      line-height: 24px
+      letter-spacing: 0.14px
 
+.more
+  background-color: $accent
+  height: 600px
 
 
 
@@ -96,10 +128,17 @@ body
   .offer
     height: 400px
     &-text
+      text-align: center
       h1
         font-size: 40px
         margin-top: 50px
         font-weight: bold
+
+  .features
+    margin-bottom: 40px
+    &-block
+      margin-top: 40px
+      margin-bottom: 40px
 
 
 /* Small Devices, Tablets */
@@ -149,6 +188,16 @@ body
     &::after
       transform: rotate(-45deg)
 
+  .features
+    &-block
+      h2
+        font-weight: bold
+    &-item
+      h5
+        font-weight: bold
+      p
+        line-height: 21px
+
 
 
 /* Extra Small Devices, Phones */
@@ -180,7 +229,23 @@ body
         font-weight: bold
       p
         font-size: 12px
-        margin-right: 60px
+
+  .features
+    &-block
+      h2
+        font-size: 40px
+      p
+        font-size: 12px
+        line-height: 20px
+    &-item
+      img
+        margin-bottom: 25px
+      p
+        font-size: 12px
+    .media
+      display: block
+      text-align: center
+
 
 
 /* Custom, iPhone Retina */
